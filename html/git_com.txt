@@ -1,0 +1,6 @@
+git status - to check latest status
+git add <filename> - to add created file to staging area
+git add . - to add all modified files
+git commit -m "Message" - to commit modified files to local repository 
+git push -u origin master - to push copde to master
+git pull <git url>  - to pull code from git
