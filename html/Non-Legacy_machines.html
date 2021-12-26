@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Smart Factory</title>
+    <title>Machine KPI</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -12,7 +12,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="dashboardnew.css"> -->
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dashboardnew.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
@@ -21,37 +23,38 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <!--Custom Style-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+</head>
 <body>
 
-<!-- Header start-->
+<!-- Navigatio bar start-->
 
-    <header class="page_header">
-      <img class="page_header_logo" src="IISC logo.png">
-      <span class="page_header_text">Smart Factory</span>
-      <div class="collapse navbar-collapse" >
-        <ul class="navbar-nav ml-auto nav-flex-icons" >
-          <li>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse" >
-                  <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span style="color:black;padding-right: 5%;">John</span><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img class="logo_nav" src="icons/png/wipro_logo_big.png">
+            <span class="menu-collapsed_text_color" style="margin-left: 10%;">Machine Tending</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto nav-flex-icons" style="margin-right: -5%;">
+                <li class="vertical-line" style="height: 37px; margin-top: 4%;"></li>
+                <li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-list-4">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span style="color:black;padding-right: 5%;">John</span><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
                                                                                                  alt="avatar image" height="35"><i class="fas fa-caret-down" style="color:black;padding-left: 25%;"></i>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="changePassword.html">Change Password</a>
-                        <a class="dropdown-item" href="TendingLogin.html">Log Out</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-            </li>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="changePassword.html">Change Password</a>
+                                    <a class="dropdown-item" href="TendingLogin.html">Log Out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="navbar-brand" href="TendingLogin.html">
                         <img src="icons/png/icon_logout.png" style="margin-top: 47%;">
@@ -59,9 +62,9 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </nav>
 
-<!-- Header END -->
+<!-- NavBar END -->
 
 <!-- Bootstrap row -->
 
@@ -154,7 +157,7 @@
                 <div class="card primary-color-dark" style="height: 7rem;">
                     <div style="margin-left: 85%;color: white;margin-top: 2%;"><i class="fas fa-copy fa-2x"></i></div>
                     <div class="card-body text-center" style="margin-top: -15%;">
-                        <p class="card-text">DC MOTOR</p>
+                        <p class="card-text">CURRENT JOB</p>
                         <p class="card_value">PO1109</p>
                     </div>
                 </div>
@@ -162,7 +165,7 @@
                 <div class="card info-color-dark" style="height: 7rem;">
                     <div style="margin-left: 85%;color: white;margin-top: 2%;"><i class="fas fa-clipboard-check fa-2x"></i></div>
                     <div class="card-body text-center" style="margin-top: -15%;">
-                        <p class="card-text">PN CYLINDER</p>
+                        <p class="card-text">PRODUCTION</p>
                         <p class="card_value">1234</p>
                     </div>
                 </div>
@@ -170,7 +173,7 @@
                 <div class="card warning-color-dark" style="height: 7rem;">
                     <div style="margin-left: 85%;color: white;margin-top: 2%;"> <i class="fas fa-clipboard fa-2x"></i></div>
                     <div class="card-body text-center" style="margin-top: -15%;">
-                        <p class="card-text">DRIP</p>
+                        <p class="card-text">VALID PARTS</p>
                         <p class="card_value">4567</p>
                     </div>
                 </div>
@@ -178,7 +181,7 @@
                 <div class="card danger-color-dark" style="height: 7rem;">
                     <div style="margin-left: 85%;color: white;margin-top: 2%;"><i class="fas fa-layer-group fa-2x"></i></div>
                     <div class="card-body text-center" style="margin-top: -15%;">
-                        <p class="card-text">DRONE</p>
+                        <p class="card-text">INVALID PARTS</p>
                         <p class="card_value">3423</p>
                     </div>
                 </div>
@@ -259,7 +262,36 @@
                                                             </div>
                                                         </div>
 
-                                                        
+                                                        <!--<div class="vertical-timeline-item vertical-timeline-element">
+                                                            <div>
+                                                                <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-warning"> </i> </span>
+                                                                <div class="vertical-timeline-element-content bounce-in">
+                                                                    <p class="timeline-title">CONVEYOR ERROR </p>
+                                                                    <p>Conveyor speed modified to 75% </p> <span class="vertical-timeline-element-date">12:25 PM</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                                            <div>
+                                                                <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-danger"> </i> </span>
+                                                                <div class="vertical-timeline-element-content bounce-in">
+                                                                    <p class="timeline-title">VACCUM PUMP ERROR</p>
+                                                                    <p>Pump is in active</p> <span class="vertical-timeline-element-date">6:00 PM</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                                            <div>
+                                                                <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-primary"> </i> </span>
+                                                                <div class="vertical-timeline-element-content bounce-in">
+                                                                    <p class="timeline-title text-success">VISION</p>
+                                                                    <p>Vision disconnected</p> <span class="vertical-timeline-element-date">9:00 AM</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
+
                                                       </div>
                                                 </div>
                                                 <button type="button" class="btn btn-primary text-capitalize" style="width: 40%;white-space: nowrap;margin-left: 28%;">
@@ -283,7 +315,6 @@
         </div><!-- Main Col END -->
 
     </div><!-- body-row END -->
-
     <script type="text/javascript">
         // Hide submenus
         $('#body-row .collapse').collapse('hide');
